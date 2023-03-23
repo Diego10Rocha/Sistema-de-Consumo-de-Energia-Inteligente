@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        ServerSocket servidor = new ServerSocket(1017);
+        ServerSocket servidor = new ServerSocket(8017);
         System.out.println("Porta 1017 aberta!");
 
         while (true) {
