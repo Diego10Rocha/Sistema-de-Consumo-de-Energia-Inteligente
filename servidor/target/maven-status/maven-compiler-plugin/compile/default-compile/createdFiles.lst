@@ -1,0 +1,14 @@
+br/uefs/tec502/AtendimentoThread$1.class
+br/uefs/tec502/model/ConsumoCliente.class
+br/uefs/tec502/enums/HttpStatus.class
+br/uefs/tec502/service/ConsumoService.class
+br/uefs/tec502/exception/Error.class
+br/uefs/tec502/model/BoletoCliente.class
+br/uefs/tec502/AtendimentoThread.class
+br/uefs/tec502/Main.class
+br/uefs/tec502/exception/HTTPException.class
+br/uefs/tec502/http/HttpResponse.class
+br/uefs/tec502/http/HttpRequest.class
+br/uefs/tec502/enums/HttpMethod.class
+br/uefs/tec502/dto/MedidorDTO.class
+br/uefs/tec502/dto/ResponseAPI.class

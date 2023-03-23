@@ -1,0 +1,10 @@
+/home/diego/Documentos/UEFS/MI Concorrencia e Conectividade/Sistema de Consumo de Energia Inteligente/medidor/src/main/java/br/uefs/tec502/model/BoletoCliente.java
+/home/diego/Documentos/UEFS/MI Concorrencia e Conectividade/Sistema de Consumo de Energia Inteligente/medidor/src/main/java/br/uefs/tec502/model/ConsumoCliente.java
+/home/diego/Documentos/UEFS/MI Concorrencia e Conectividade/Sistema de Consumo de Energia Inteligente/medidor/src/main/java/br/uefs/tec502/dto/ResponseAPI.java
+/home/diego/Documentos/UEFS/MI Concorrencia e Conectividade/Sistema de Consumo de Energia Inteligente/medidor/src/main/java/br/uefs/tec502/dto/MedidorDTO.java
+/home/diego/Documentos/UEFS/MI Concorrencia e Conectividade/Sistema de Consumo de Energia Inteligente/medidor/src/main/java/br/uefs/tec502/Main.java
+/home/diego/Documentos/UEFS/MI Concorrencia e Conectividade/Sistema de Consumo de Energia Inteligente/medidor/src/main/java/br/uefs/tec502/exception/HTTPException.java
+/home/diego/Documentos/UEFS/MI Concorrencia e Conectividade/Sistema de Consumo de Energia Inteligente/medidor/src/main/java/br/uefs/tec502/exception/Error.java
+/home/diego/Documentos/UEFS/MI Concorrencia e Conectividade/Sistema de Consumo de Energia Inteligente/medidor/src/main/java/br/uefs/tec502/Request.java
+/home/diego/Documentos/UEFS/MI Concorrencia e Conectividade/Sistema de Consumo de Energia Inteligente/medidor/src/main/java/br/uefs/tec502/enums/HttpStatus.java
+/home/diego/Documentos/UEFS/MI Concorrencia e Conectividade/Sistema de Consumo de Energia Inteligente/medidor/src/main/java/br/uefs/tec502/enums/HttpMethod.java
