@@ -3,7 +3,7 @@ services:
   server:
     stdin_open: true
     tty: true
-    image: diego10rocha/pbl1_redes:medidor_energia_1017_final
+    image: diego10rocha/pbl1_redes:monitor_usuario_1017_final
     build:
       context: .
       dockerfile: Dockerfile
