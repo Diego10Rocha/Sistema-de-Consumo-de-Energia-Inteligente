@@ -12,6 +12,11 @@ public class MedidorDTO {
 
     private boolean alerta;
 
+    /**
+     * Construtor da classe MedidorDTO
+     * @param codigoContrato
+     * @param valorMedicao
+     */
     public MedidorDTO(String codigoContrato, Integer valorMedicao) {
         this.codigoContrato = codigoContrato;
         this.valorMedicao = valorMedicao;

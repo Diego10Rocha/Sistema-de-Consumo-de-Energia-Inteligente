@@ -24,6 +24,7 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
+        //texto do menu apresentado no gerenciamento do medidor
         String menu = "================================\n" +
                 "\tEscolha uma opcao\t\n" +
                 "================================\n" +
@@ -38,14 +39,17 @@ public class Main {
         } catch (IOException ignored) {
 
         }
-        String request = "GET /uuid HTTP/1.1 \r\nHost: localhost:8081\r\n";
+        //cadastro do medidor
+        String request = "GET /uuid HTTP/1.1 \r\nHost: 172.16.103.3:1017\r\n";
         cliente.getOutputStream().write(request.getBytes("UTF-8"));
 
+        //pegando retorno da requisição
         InputStreamReader isr = new InputStreamReader(cliente.getInputStream());
         BufferedReader reader = new BufferedReader(isr);
 
         while (!reader.ready());
         String line = reader.readLine();
+        //se a requisição retornou status 200 o codigo de contrato é salvo
         if(line.contains("OK")){
             line = reader.readLine();
             codigoContrato = reader.readLine();
@@ -59,6 +63,7 @@ public class Main {
 
         }
 
+        //thread para fazer a atualização do valor de consumo do usuario, baseado na taxa de consumo
         new Thread(() -> {
             while(true) {
                 valorConsumido += taxaConsumo;
@@ -69,6 +74,7 @@ public class Main {
             }
         }).start();
 
+        //thread para enviar os valores obtidos nas medições
         new Thread(() -> {
             while(true) {
                 try {
@@ -89,6 +95,7 @@ public class Main {
             }
         }).start();
 
+        //menu iterativo para gerenciamento do medidor
         while (true) {
 
             int opcao;
@@ -123,7 +130,11 @@ public class Main {
 
     }
 
+    /**
+     * metodo que cria uma conexão com um servidor
+     * @throws IOException
+     */
     private static void abrirConexaoComServidor() throws IOException {
-        cliente = new Socket(IP,1017);
+        cliente = new Socket("192.168.0.102",1017);
     }
 }

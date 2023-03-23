@@ -65,6 +65,11 @@ public class AtendimentoThread extends Thread {
         }
     }
 
+    /**
+     * Metodo para redirecionar cada requisição para a sua devida rota
+     * @param httpRequest
+     * @return
+     */
     private synchronized static ResponseAPI redirectToRoute(HttpRequest httpRequest) {
         try {
             String payload = "";
@@ -116,6 +121,10 @@ public class AtendimentoThread extends Thread {
         }
     }
 
+    /**
+     * Metodo get de encapsulamento dos dados dos medidores de cada usuário
+     * @return
+     */
     public static Map<String, List<MedidorDTO>> getMedidores() {
         return medidores;
     }

@@ -22,6 +22,13 @@ public class HttpRequest {
 
     private String host;
 
+    /**
+     * Metodo para tratamento de dados de entrada no servidor pra moldar as requisições na API
+     *
+     * @param cliente
+     * @return
+     * @throws IOException
+     */
     public static HttpRequest getRequest(Socket cliente) throws IOException {
 
         HttpRequest httpRequest = new HttpRequest();

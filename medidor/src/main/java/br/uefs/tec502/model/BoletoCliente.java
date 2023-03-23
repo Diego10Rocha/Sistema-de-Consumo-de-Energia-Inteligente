@@ -8,6 +8,11 @@ public class BoletoCliente {
     private String validade;
     private String mesReferencia;
 
+    /**
+     * construtir da classe BoletoCliente
+     * @param contrato
+     * @param consumo
+     */
     public BoletoCliente(String contrato, Integer consumo) {
         this.contrato = contrato;
         this.consumo = consumo;

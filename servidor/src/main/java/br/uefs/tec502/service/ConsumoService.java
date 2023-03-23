@@ -14,6 +14,14 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class ConsumoService {
+
+    /**
+     * Metodo para preparar os dados de consumo de cliente para o retorno da API
+     * @param httpRequest
+     * @return
+     * @throws HTTPException
+     * @throws Error
+     */
     public synchronized static ConsumoCliente getConsumoAtual(HttpRequest httpRequest) throws HTTPException, Error {
         if(!httpRequest.getMethod().equals(HttpMethod.GET.getDescricao()))
             throw new HTTPException();
@@ -30,6 +38,13 @@ public class ConsumoService {
         return new ConsumoCliente(ultimaMedicao, mensagem);
     }
 
+    /**
+     * Metodo para gerar boleto e preparar o retorno para a API
+     * @param httpRequest
+     * @return
+     * @throws HTTPException
+     * @throws Error
+     */
     public synchronized static BoletoCliente getBoleto(HttpRequest httpRequest) throws HTTPException, Error {
         if(!httpRequest.getMethod().equals(HttpMethod.GET.getDescricao()))
             throw new HTTPException();

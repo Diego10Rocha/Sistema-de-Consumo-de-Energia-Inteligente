@@ -11,6 +11,7 @@ public class Main {
 
         while (true) {
             Socket cliente = servidor.accept();
+            //Cria uma nova thread para cada requisição que chega no servidor
             new AtendimentoThread(cliente).start();
 
         }

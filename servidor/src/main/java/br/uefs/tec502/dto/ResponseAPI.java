@@ -7,8 +7,8 @@ public class ResponseAPI {
     private HttpStatus status;
 
     public ResponseAPI() {
-        this.payload = "";
-        this.status = HttpStatus.INTERNAL_SERVER_ERROR;
+        this.payload = "Not Found!";
+        this.status = HttpStatus.BAD_REQUEST;
     }
 
     public ResponseAPI(String payload, HttpStatus status) {
