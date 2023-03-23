@@ -93,7 +93,7 @@ public class AtendimentoThread extends Thread {
                     List<MedidorDTO> medidicoes = medidores.get(medidorDTO.getCodigoContrato());
                     if(medidicoes.size() > 1) {
                         int somaConsumo = medidicoes.get(medidicoes.size()-1).getValorMedicao();
-                        int ultimaVariacao = medidicoes.get(medidicoes.size()-2).getValorMedicao();
+                        int ultimaVariacao = somaConsumo - medidicoes.get(medidicoes.size()-2).getValorMedicao();
                         double mediaConsumo = somaConsumo / medidicoes.size();
                         if((medidorDTO.getValorMedicao() - somaConsumo) > mediaConsumo + ultimaVariacao)
                             medidorDTO.setAlerta(true);
