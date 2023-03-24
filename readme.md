@@ -75,12 +75,13 @@ $ docker compose up
 ```
 Entretanto, vale ressaltar que apenas o servidor é inicializado junto ao container, para executar o medidor e a interface do usuário é necessário executar o arquivo com a extensão .jar do respectivo projeto com o seguinte comando.
 
+Para executar o medidor basta executar o seu arquivo jar no terminal utilizando o seguinte comando
 ```
-$ java -jar nome-do-arquivo.jar
+$ java -jar medidor-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
-ou o seguinte comando caso o jar não esteja na pasta raiz do sistema:
+ou caso queira executar a interface do usuário basta executar o seguinte comando no console do container da imagem:
 ```
-$ java -jar caminho-do-arquivo/nome-do-arquivo.jar
+$ java -jar monitor-usuario-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 ## Conclusão
 
