@@ -135,6 +135,6 @@ public class Main {
      * @throws IOException
      */
     private static void abrirConexaoComServidor() throws IOException {
-        cliente = new Socket("192.168.0.102",8017);
+        cliente = new Socket(IP,1017);
     }
 }

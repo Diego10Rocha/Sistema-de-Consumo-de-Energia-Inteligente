@@ -79,6 +79,10 @@ public class AtendimentoThread extends Thread {
                     ConsumoCliente consumoCliente = ConsumoService.getConsumoAtual(httpRequest);
                     payload = gson.toJson(consumoCliente);
                     return new ResponseAPI(payload, HttpStatus.OK);
+                case "/consumo/historico":
+                    List<ConsumoCliente> consumoClientes = ConsumoService.getHistorico(httpRequest);
+                    payload = gson.toJson(consumoClientes);
+                    return new ResponseAPI(payload, HttpStatus.OK);
                 case "/consumo/obter-boleto":
                     BoletoCliente boletoCliente = ConsumoService.getBoleto(httpRequest);
                     payload = gson.toJson(boletoCliente);

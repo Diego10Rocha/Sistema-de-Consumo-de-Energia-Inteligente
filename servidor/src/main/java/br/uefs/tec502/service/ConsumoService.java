@@ -39,6 +39,28 @@ public class ConsumoService {
     }
 
     /**
+     * Modela um historico para retorno da requisição
+     * @param httpRequest
+     * @return
+     * @throws HTTPException
+     * @throws Error
+     */
+    public synchronized static List<ConsumoCliente> getHistorico(HttpRequest httpRequest) throws HTTPException, Error {
+        if(!httpRequest.getMethod().equals(HttpMethod.GET.getDescricao()))
+            throw new HTTPException();
+        if(!httpRequest.getParams().containsKey("contrato") || !AtendimentoThread.getMedidores().containsKey(httpRequest.getParams().get("contrato")))
+            throw new Error("'contrato' not found!");
+        List<MedidorDTO> medidorDTOS = AtendimentoThread.getMedidores().get(httpRequest.getParams().get("contrato"));
+        List<ConsumoCliente> consumoClientes = new ArrayList<>();
+        if (!medidorDTOS.isEmpty() && medidorDTOS != null){
+            medidorDTOS.forEach(medidorDTO -> {
+                consumoClientes.add(new ConsumoCliente(medidorDTO.getValorMedicao(), medidorDTO.getDataHoraMedicao()));
+            });
+        }
+        return consumoClientes;
+    }
+
+    /**
      * Metodo para gerar boleto e preparar o retorno para a API
      * @param httpRequest
      * @return
